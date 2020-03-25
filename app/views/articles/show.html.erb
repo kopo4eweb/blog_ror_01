@@ -10,7 +10,17 @@
 
 <p><%= link_to 'Back', articles_path %></p>
 
+<hr>
+<p><b>Comments list</b></p>
+<% @comments.each do |comment| %>
+  <p>
+  <b><%= comment.author %></b> | <em><%= comment.created_at %></em><br>
+  <%= comment.body %>
+  </p>
+<% end %>
 
+<hr>
+<p><b>Add comments</b></p>
 <%= form_for([@article, @article.comments.build]) do |f| %>
   <p>
       <%= f.label :author %><br>
