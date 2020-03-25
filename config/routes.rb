@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'about' =>'home#about'
 
   resources :articles do
-    resources :comments
+    resource :comments, only: [:create]
   end  
 
   resource :contacts, only: [:new, :create], path_names: {:new => ''}
