@@ -21,14 +21,18 @@
 
 <hr>
 <p><b>Add comments</b></p>
-<%= form_for([@article, @article.comments.build]) do |f| %>
-  <p>
-      <%= f.label :author %><br>
-      <%= f.text_field :author %>
-  </p>
-  <p>
-      <%= f.label :body %><br>
-      <%= f.text_area :body %>
-  </p>
-  <%= f.submit %>
+<% if user_signed_in? %>
+  <%= form_for([@article, @article.comments.build]) do |f| %>
+    <p>
+      <%= current_user.username %>
+    </p>
+    <p>
+        <%= f.label :body %><br>
+        <%= f.text_area :body %>
+    </p>
+    <%= f.submit %>
+  <% end %>
+<% else %>
+    <p>Sign In for write comments. <%= link_to 'Sign In', new_user_session_path %> 
+    </p>
 <% end %>
