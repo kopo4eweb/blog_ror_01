@@ -3,6 +3,7 @@
   <head>
     <title>Blog</title>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui, shrink-to-fit=no">
     <%= csp_meta_tag %>
 
     <!-- Bootstrap CSS -->
@@ -13,14 +14,18 @@
 
   <body>
     <div class="container">
-      <% if user_signed_in? %>
-        <%= current_user.username %> | <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign In', new_user_session_path %> 
-      <% end %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
+      <div class="row">
+        <div class="col-12">
+          <% if user_signed_in? %>
+            <%= current_user.username %> | <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign In', new_user_session_path %> 
+          <% end %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+          <%= yield %>
+        </div>
+      </div>
     </div>
     
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
