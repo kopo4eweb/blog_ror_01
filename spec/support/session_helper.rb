@@ -7,3 +7,11 @@ def sign_up
 
     click_button 'Sign up'
 end
+
+
+def add_article title, text
+    visit new_article_path
+    fill_in :article_title, with: title
+    fill_in :article_text, with: text
+    click_button 'Save Article'
+end

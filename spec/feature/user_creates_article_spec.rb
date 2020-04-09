@@ -11,15 +11,10 @@ feature "Article creation" do
     end  
 
     scenario "allows user to create new article" do
-        visit new_article_path
-
         title = 'New article title'
-
-        fill_in :article_title, with: title
-        fill_in :article_text, with: 'Text article very big!'
-
-        click_button 'Save Article'
-
+        text = 'Text article very big!'
+        add_article title, text
         expect(page).to have_content title
+        expect(page).to have_content text
     end  
 end
