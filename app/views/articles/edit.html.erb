@@ -1,4 +1,4 @@
-<h1>Edit Article</h1>
+<h1><%= t('articles.edit_article') %></h1>
 
 <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
     <% if @article && @article.errors.any? %>

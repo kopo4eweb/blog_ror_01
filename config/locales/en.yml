@@ -37,3 +37,28 @@ en:
 
   devise:
     sign_up: "Sign up"
+
+  blog:
+    title: "Home#index"
+    link: "My Blog"
+
+  articles:
+    list_article: "Articles"
+    new_article: "New Article"
+    edit_article: "Edit Article"
+    link:
+      edit: "Edit"
+      show: "Show"
+      destroy: "Destroy"
+      new_link: "New article"
+    show:
+      title: "Title:"
+      text: "Text:"
+      back: "Back to list"
+
+  comments:
+    list_comments: "Comments list"
+    add_title: "Add comments"
+
+  contacts:
+    success: "Thanks!"
