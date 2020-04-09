@@ -1,6 +1,4 @@
 <h1><%= t('contacts.contact_us') %></h1>
-<h3>Send message</h3>
-
 <%= form_for :contact, url: contacts_path, html: {class: "contact-form"} do |f| %>
     <% if @contact && @contact.errors.any? %>
         <ul>
