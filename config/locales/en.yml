@@ -34,9 +34,10 @@ en:
 
   contacts:
     contact_us: "Contact Us"
+    success: "Thanks!"
 
   devise:
-    sign_up: "Sign up"
+    sign_up: "Sign up"    
 
   blog:
     title: "Home#index"
@@ -58,7 +59,4 @@ en:
 
   comments:
     list_comments: "Comments list"
-    add_title: "Add comments"
-
-  contacts:
-    success: "Thanks!"
+    add_title: "Add comments"    
